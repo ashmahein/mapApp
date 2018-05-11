@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Js0-Mt-8pI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Location-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Location" id="BYZ-38-t0r" customClass="ViewController" customModule="MaheinAshHW9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude: 0.000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2l7-De-NWc">
+                                <rect key="frame" x="16" y="110" width="159" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude: 0.000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXr-mT-1AJ">
+                                <rect key="frame" x="16" y="139" width="175" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRe-Vy-dWi">
+                                <rect key="frame" x="16" y="168" width="225" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Search Keyword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jix-gE-hRu">
+                                <rect key="frame" x="16" y="199" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eSt-U7-MVr">
+                                <rect key="frame" x="16" y="237" width="343" height="410"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mXr-mT-1AJ" firstAttribute="top" secondItem="2l7-De-NWc" secondAttribute="bottom" constant="6" id="0Ur-D2-fNI"/>
+                            <constraint firstItem="mXr-mT-1AJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5vZ-np-MP6"/>
+                            <constraint firstItem="2l7-De-NWc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="7Qf-uD-Rfn"/>
+                            <constraint firstItem="eSt-U7-MVr" firstAttribute="top" secondItem="jix-gE-hRu" secondAttribute="bottom" constant="8" id="7lS-Ac-3ib"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mXr-mT-1AJ" secondAttribute="trailing" constant="184" id="Ge9-rP-Ih1"/>
+                            <constraint firstItem="MRe-Vy-dWi" firstAttribute="top" secondItem="mXr-mT-1AJ" secondAttribute="bottom" constant="6" id="P8L-iO-ozU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MRe-Vy-dWi" secondAttribute="trailing" constant="134" id="S1u-s7-LiB"/>
+                            <constraint firstItem="jix-gE-hRu" firstAttribute="top" secondItem="MRe-Vy-dWi" secondAttribute="bottom" constant="8" id="S39-MA-BEe"/>
+                            <constraint firstItem="2l7-De-NWc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="c27-Tq-7hY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2l7-De-NWc" secondAttribute="trailing" constant="200" id="c5R-Ot-uU9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eSt-U7-MVr" secondAttribute="bottom" constant="20" id="dm1-Aw-z1v"/>
+                            <constraint firstItem="eSt-U7-MVr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eWD-eb-kSW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jix-gE-hRu" secondAttribute="trailing" constant="16" id="et3-5c-OyH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSt-U7-MVr" secondAttribute="trailing" constant="16" id="gAp-yl-Faf"/>
+                            <constraint firstItem="MRe-Vy-dWi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gzT-5J-ztw"/>
+                            <constraint firstItem="jix-gE-hRu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rl2-CK-xNm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Location" prompt="Traveler" id="pge-MO-0Wu"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="MRe-Vy-dWi" id="AJx-Pv-l13"/>
+                        <outlet property="latitudeLabel" destination="2l7-De-NWc" id="1is-1H-fV6"/>
+                        <outlet property="longitudeLabel" destination="mXr-mT-1AJ" id="x0L-Yo-Ymc"/>
+                        <outlet property="mapkitView" destination="eSt-U7-MVr" id="J8b-pQ-JSh"/>
+                        <outlet property="searchTextField" destination="jix-gE-hRu" id="aDU-X8-rZw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DFe-6o-3Bw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Js0-Mt-8pI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jgt-BU-HKv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ydp-4L-uEu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VbS-M9-Xui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511" y="134"/>
+        </scene>
+    </scenes>
+</document>
